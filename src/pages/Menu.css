@@ -1,0 +1,310 @@
+/* =========================
+   MENU GLOBAL
+   ========================= */
+
+.menu-page {
+  background: #FDF8F0;
+}
+
+/* =========================
+   COFFEE BANNER
+   ========================= */
+
+.menu__coffee-banner {
+  background: #3D2008;
+  padding: 20px 80px;
+}
+
+.menu__coffee-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__coffee-banner-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.menu__coffee-info {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(253, 248, 240, 0.6);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.menu__coffee-info strong {
+  color: #F0E0C8;
+  font-weight: 400;
+}
+
+/* =========================
+   CATEGORIES
+   ========================= */
+
+.menu__cats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.menu__cat {
+  background: transparent;
+  border: 1px solid rgba(200, 134, 60, 0.2);
+  color: rgba(44, 26, 10, 0.5);
+  padding: 10px 24px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  transition: all 0.3s;
+}
+
+.menu__cat:hover {
+  border-color: #C8863C;
+  color: #3D2008;
+}
+
+.menu__cat--active {
+  background: #C8863C;
+  border-color: #C8863C;
+  color: #fff;
+}
+
+/* =========================
+   GRID MENU (FIX UNIFORME)
+   ========================= */
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* =========================
+   CARD PRODUITS (FIX HAUTEUR)
+   ========================= */
+
+.menu-card {
+  background: #fff;
+  border: 1px solid rgba(200, 134, 60, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  border-color: rgba(200, 134, 60, 0.3);
+  box-shadow: 0 8px 40px rgba(200, 134, 60, 0.1);
+}
+
+/* TAG */
+.menu-card__tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #C8863C;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  font-family: 'Jost', sans-serif;
+}
+
+/* IMAGE FIX PROPRE */
+.menu-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #FDF8F0;
+  position: relative;
+}
+
+.menu-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s;
+}
+
+.menu-card:hover .menu-card__img img {
+  transform: scale(1.04);
+}
+
+/* BODY FIX UNIFORME */
+.menu-card__body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.menu-card__origin {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C8863C;
+  margin-bottom: 6px;
+  font-weight: 300;
+  font-family: 'Jost', sans-serif;
+}
+
+.menu-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3D2008;
+  margin-bottom: 8px;
+}
+
+.menu-card__desc {
+  font-size: 13px;
+  color: rgba(44, 26, 10, 0.5);
+  line-height: 1.7;
+  margin-bottom: 14px;
+  font-weight: 300;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.menu-card__price {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #C8863C;
+  margin-top: auto;
+}
+
+/* =========================
+   SIGNATURES
+   ========================= */
+
+.menu__grid--signatures {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(200, 134, 60, 0.06);
+}
+
+.menu-card--signature {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  min-height: 520px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.menu-card--signature-reverse {
+  grid-template-columns: 1fr 1.4fr;
+  direction: rtl;
+}
+
+.menu-card--signature-reverse > * {
+  direction: ltr;
+}
+
+.signature__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.signature__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.menu-card--signature:hover .signature__img img {
+  transform: scale(1.04);
+}
+
+.signature__tag {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #C8863C;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  font-family: 'Jost', sans-serif;
+}
+
+.signature__info {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signature__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #3D2008;
+  margin: 12px 0;
+  line-height: 1.15;
+}
+
+.signature__desc {
+  font-size: 15px;
+  color: rgba(44, 26, 10, 0.55);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
+.signature__price {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #C8863C;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__coffee-banner {
+    padding: 20px 24px;
+  }
+
+  .menu__coffee-info {
+    gap: 16px;
+  }
+
+  .menu-card--signature {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .signature__info {
+    padding: 40px 24px;
+  }
+
+  .signature__name {
+    font-size: 32px;
+  }
+}

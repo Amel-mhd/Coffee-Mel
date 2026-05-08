@@ -1,0 +1,197 @@
+/* =========================
+   ABOUT PAGE - GLOBAL
+   ========================= */
+
+.about-page {
+  background: #FDF8F0;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.about__hero {
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px;
+}
+
+.about__hero-img {
+  position: absolute;
+  inset: 0;
+}
+
+.about__hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 20%,
+    rgba(44, 26, 10, 0.75) 100%
+  );
+}
+
+.about__hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   STORY
+   ========================= */
+
+.about__story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about__text {
+  font-size: 14px;
+  color: rgba(44, 26, 10, 0.6);
+  line-height: 1.9;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.about__photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  height: 500px;
+}
+
+.about__photo {
+  overflow: hidden;
+}
+
+.about__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.about__photo:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================
+   VALEURS (TON JSX STYLE)
+   ========================= */
+
+.about__values {
+  background: #FDF8F0; /* même fond que story */
+  padding: 100px 0;
+}
+
+/* container */
+.about__values-list {
+  margin-top: 70px;
+  border-top: 1px solid rgba(61, 32, 8, 0.1);
+}
+
+/* ligne */
+.about__value-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  padding: 40px 0;
+
+  border-bottom: 1px solid rgba(61, 32, 8, 0.1);
+
+  transition: transform 0.3s ease;
+}
+
+.about__value-row:hover {
+  transform: translateX(8px);
+}
+
+/* gauche */
+.about__value-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* numéro */
+.about__value-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: rgba(200, 134, 60, 0.7);
+  min-width: 60px;
+}
+
+/* titre */
+.about__value-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #3D2008;
+}
+
+/* description */
+.about__value-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(61, 32, 8, 0.65);
+  font-weight: 300;
+  max-width: 520px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .about__hero {
+    padding: 24px;
+  }
+
+  .about__story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__photos-grid {
+    height: 300px;
+  }
+
+  .about__value-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about__value-left {
+    align-items: flex-start;
+  }
+
+  .about__value-title {
+    font-size: 22px;
+  }
+
+  .about__values {
+  position: relative;
+}
+
+.about__values::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: 80px;
+  height: 1px;
+  background: rgba(61, 32, 8, 0.08);
+}
+
+}

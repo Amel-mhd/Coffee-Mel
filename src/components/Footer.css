@@ -1,0 +1,72 @@
+.footer {
+  background: #3D2008;
+  color: #FDF8F0;
+  padding: 80px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(253, 248, 240, 0.08);
+}
+
+.footer__logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  color: #FDF8F0;
+  margin-bottom: 16px;
+}
+
+.footer__logo span { color: #C8863C; }
+
+.footer__tagline {
+  font-size: 13px;
+  color: rgba(253, 248, 240, 0.4);
+  line-height: 1.8;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer__nav-title {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #C8863C;
+  margin-bottom: 20px;
+}
+
+.footer__nav ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.footer__nav a {
+  font-size: 13px;
+  color: rgba(253, 248, 240, 0.4);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 300;
+}
+
+.footer__nav a:hover { color: #FDF8F0; }
+
+.footer__info p {
+  font-size: 13px;
+  color: rgba(253, 248, 240, 0.4);
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(253, 248, 240, 0.2);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 60px 24px; }
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__bottom { flex-direction: column; gap: 8px; }
+}
